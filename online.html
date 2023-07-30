@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W3Schools</title>
+    <link rel="icon" type="image/x-icon" href="w3.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    body {
+        margin: 0;
+    }
+    .a0 {
+        display: grid;
+        grid-template-columns: auto;
+    }
+    .a0 .logo {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        background-color: #04aa6d;
+    }
+    .a0 .logo img{
+        width: 40px;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    .a0 .menu {
+        grid-column-start: 2;
+        grid-column-end: 8;
+        font-size: 17px;
+    }
+    .a0 .menu .block1 {
+        display: none;
+    }
+    .a0 .menu .block2 {
+        display: inline-block;
+    }
+    .a0 .menu p {
+        display: block;
+        margin: 0;
+        margin-bottom: -5px;
+        float: left;
+        padding: 20px 10px;
+    }
+    .a0 .menu p:hover {
+        background-color: #04aa6d;
+        color: white;
+    }
+    .a0 .modes {
+        grid-column-start: 8;
+        grid-column-end: 10;
+        background-color: white;
+    }
+    .a0 .modes div {
+        display: inline-block;
+    }
+    .a0 .modes .place {
+        float: right;
+        padding-top: 20px;
+    }
+    .a0 .modes div img {
+        width: 20px;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+    .a0 .details {
+        grid-column-start: 10;
+        grid-column-end: 12;
+    }
+    .a0 .details .one ,.a0 .details .two{
+        display: inline-block;
+        width: fit-content;
+        padding: 10px 20px;
+        border-radius: 25px;
+        margin: 10px 10px 0 10px;
+    }
+    .a0 .login {
+        grid-column-start: 12;
+        grid-column-end: 14;
+    }
+    .a0 .login div{
+        background-color: #04aa6d;
+        color: white;
+        margin-top: 10px;
+        padding: 10px;
+        border-radius: 25px;
+        text-align: center;
+        margin-right: 20px;
+    }
+    .a1 {
+        text-align: center;
+        padding: 80px 0px 100px 0px;
+        background-color: #282A35;
+        color: white;
+    }
+    .a12 {
+        color: plum;
+    }
+    form {
+        max-width: 400px;
+    }
+    .a13 {
+        padding: 10px;
+        font-size: 17px;
+        border-radius: 25px 0 0 25px;
+        float: left;
+        width: 80%;
+        background-color: #f1f1f1;
+        margin-bottom: 15px;
+    }
+    .a131 {
+        width: 20%;
+        padding: 10px;
+        background-color: #2196f3;
+        color: white;
+        font-size: 17px;
+        border-radius: 0 25px 25px 0;
+        border-left: none;
+        cursor: pointer;
+        margin-bottom: 15px;
+    }
+    .a131:hover {
+        background: #0b7dda;
+    }
+    .a14 {
+        color: white;
+        font-weight: 700;
+        font-size: larger;
+    }
+    .a1 .a14:hover{
+        color: #04aa6d;
+    }
+    .a2 {
+        display: flex;
+        background-color: rgb(178, 235, 235);
+        padding: 60px 80px;
+        font-weight: 700;
+        height: auto;
+        flex-wrap: wrap;
+    }
+    .a2sub1 {
+        text-align: center;
+        flex: 60%;
+    }
+    .a2sub2 {
+        box-shadow: 2px 2px 2px rgb(148,143,143);
+        flex: 40%;
+        padding: 20px;
+        border: 1px solid rgba(62, 79, 80, 0.096);
+        background-color: rgba(238, 222, 222, 0.726);
+    }
+    
+    .a24,.a25,.a26,.a27 {
+        border-radius: 25px;
+        padding: 15px;
+        margin: 15px;
+    }
+    .a23 {
+        list-style-type: none;
+        margin: 0 auto;
+        width: 300px;
+    }
+    .a24 {
+        background-color: green;
+        color: white;
+    }
+    .a25 {
+        background-color: bisque;
+    }
+    .a26 {
+        background-color: black;
+        color: white;
+    }
+    .a27 {
+        background-color: plum;
+    }
+    .a3 {
+        display: flex;
+        background-color: bisque;
+        padding: 60px 80px;
+        font-weight: 700;
+        flex-wrap: wrap;
+    }
+    .a3sub1 {
+        text-align: center;
+        flex: 60%;
+    }
+    .a3sub2 {
+        box-shadow: 2px 2px 2px rgb(148,143,143);
+        flex: 40%;
+        padding: 20px;
+        border: 1px solid rgba(62, 79, 80, 0.096);
+        background-color: rgba(238, 222, 222, 0.726);
+    }
+    .a33 {
+        margin: 0 auto;
+        width: 300px;
+        list-style-type: none;
+    }
+    .a34,.a35,.a36 {
+        padding: 15px;
+        margin: 15px;
+        border-radius: 25px;
+        font-weight: 700;
+    }
+    .a34 {
+        background-color: green;
+        color: white;
+    }
+    .a35 {
+        background-color: black;
+        color: white;
+    }
+    .a36 {
+        background-color: plum;
+    }
+    .a4 {
+        display: flex;
+        padding: 60px 80px;
+        font-weight: 700;
+        background-color: #282A35;
+        color: white;
+        flex-wrap: wrap;
+    }
+    .a4sub1 {
+        text-align: center;
+        flex: 60%;
+    }
+    .a4sub2 {
+        box-shadow: 2px 2px 2px rgb(148,143,143);
+        flex: 40%;
+        padding: 20px;
+        border: 1px solid rgba(62, 79, 80, 0.096);
+        background-color: rgba(238, 222, 222, 0.726);
+    }
+    .a43 {
+        margin: 0 auto;
+        width: 300px;
+        list-style-type: none;
+        font-weight: 700;
+    }
+    .a44,.a45,.a46 {
+        padding: 15px;
+        margin: 15px;
+        border-radius: 25px;
+    }
+    .a44 {
+        background-color: green;
+    }
+    .a45 {
+        background-color: beige;
+        color: black;
+    }
+    .a46 {
+        background-color: plum;
+        color: black;
+    }
+    .a5 {
+        display: flex;
+        background-color: bisque;
+        padding: 60px 80px;
+        font-weight: 700;
+        flex-wrap: wrap;
+    }
+    .a5sub1 {
+        text-align: center;
+        flex: 60%;
+    }
+    .a5sub2 {
+        box-shadow: 2px 2px 2px rgb(148,143,143);
+        flex: 40%;
+        padding: 20px;
+        border: 1px solid rgba(62, 79, 80, 0.096);
+        background-color: rgba(238, 222, 222, 0.726);
+    }
+    .a53 {
+        list-style-type: none;
+        margin: 0 auto;
+        width: 300px;
+        font-weight: 700;
+    }
+    .a54,.a55,.a56 {
+        padding: 15px;
+        margin: 15px;
+        border-radius: 25px;
+    }
+    .a54 {
+        background-color: green;
+        color: white;
+    }
+    .a55 {
+        background-color: black;
+        color: white;
+    }
+    .a56 {
+        background-color: rgb(179, 121, 179);
+    }
+    .a6 {
+        background-color: skyblue;
+        display: flex;
+        padding: 60px 80px;
+        font-weight: 700;
+        flex-wrap: wrap;
+    }
+    .a6sub1 {
+        text-align: center;
+        flex: 60%;
+    }
+    .a6sub2 {
+        box-shadow: 2px 2px 2px rgb(148,143,143);
+        flex: 40%;
+        padding: 20px;
+        border: 1px solid rgba(62, 79, 80, 0.096);
+        background-color: rgba(238, 222, 222, 0.726);
+    }
+    .a63 {
+        margin: 0 auto;
+        width: 300px;
+        list-style-type: none;
+        font-weight: 700;
+    }
+    .a64,.a65,.a66 {
+        padding: 15px;
+        margin: 15px;
+        border-radius: 25px;
+    }
+    .a64 {
+        color: white;
+        background-color: green;
+    }
+    .a65 {
+        color: white;
+        background-color: black;
+    }
+    .a66 {
+        background-color: plum;
+    }
+    .a7 {
+        background-color: #282A35;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        padding: 50px 0;
+        text-align: center;
+    }
+    .a70 {
+        border-radius: 5px;
+        width: 95%;
+        margin: auto;
+        margin-bottom: 50px;
+        height: auto;
+        background-color: #282A35;
+        padding: 10px;
+    }
+    .a71 {
+        background-color: pink;
+    }
+    .a71 p {
+        margin-bottom: 50px;
+
+    }
+    .a71 div,.a72 div,.a73 div,.a74 div,.a75 div,.a76 div {
+        color: white;
+        background-color: #282A35;
+        text-decoration: none;
+        padding: 10px 45px;
+        border-radius: 25px;
+        font-weight: bold;
+        width: fit-content;
+        margin: auto;
+    }
+    .a71 a,.a72 a,.a73 a,.a74 a,.a75 a,.a76 a{
+        color: white;
+        text-decoration: none;
+    }
+    .a72 {
+        background-color: rgb(255, 214, 163);
+    }
+    .a72 p {
+        margin-bottom: 50px;
+    }
+    .a73 {
+        background-color: azure;
+    }
+    .a73 p,.a74 p,.a75 p,.a76 p {
+        margin-bottom: 50px;
+    }
+    .a74 {
+        background-color: rgb(190, 253, 232);
+    }
+    .a75 {
+        background-color: rgba(71, 223, 223, 0.938);
+    }
+    .a76 {
+        background-color: azure;
+    }
+    .a8 {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        background-color: #282A35;
+        padding-top: 50px;
+    }
+    .a81,.a82,.a83,.a84,.a85,.a86 {
+        width: 95%;
+        margin: auto;
+        margin-bottom: 40px;
+        font-size: 50px;
+        text-align: center;
+        border-radius: 5px;
+        padding: 20px 0px;
+    }
+    .a81 {
+        background-color: pink;
+    }
+    .a82 {
+        background-color: rgb(255,214,163);
+    }
+    .a83 {
+        background-color: rgb(0, 183, 255);
+        font-size: 30px;
+    }
+    .a84 {
+        background-color: rgb(247, 214, 153);
+        font-size: 30px;
+    }
+    .a85 {
+        background-color: rgb(226, 162, 162);
+        font-size: 30px;
+    }
+    .a86 {
+        background-color: rgba(250, 220, 250, 0.836);
+        font-size: 30px;
+    }
+    .a9 {
+        background-color: #282A35;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        margin: auto;
+    }
+    .a9 .s {
+        text-align: center;
+        border-radius: 5px;
+        padding:40px 20px;
+        font-size: 23px;
+        font-weight: bold;
+        width: 95%;
+        margin: auto;
+        margin-bottom: 50px;
+    }
+    .a91 ,.a96,.a911,.a916,.a921,.a926,.a9211{
+        background-color: rgb(250, 219, 224);
+    }
+    .a92,.a97,.a912,.a917,.a922,.a927,.a9212 {
+        background-color: rgb(206, 206, 206);
+    }
+    .a93,.a98,.a913,.a918,.a923,.a928 {
+        background-color: rgba(0, 255, 255, 0.596);
+    }
+    .a94,.a99,.a914,.a919,.a924,.a929 {
+        background-color: rgb(248, 127, 187);
+    }
+    .a95,.a910,.a915,.a920,.a925,.a9210 {
+        background-color: rgb(247, 194, 131);
+    }
+    .b1 {
+        position: relative;
+        background-color: #282A35;
+        color: white;
+        margin: auto;
+        padding: 30px;
+        margin-bottom: 0;
+    }
+    .b1 h1 {
+        font-size: 56px;
+    }
+    .b1 .b1-1 img {
+        padding: 0;
+        margin-bottom: 30px;
+    }
+    .b1-1 {
+        width: 90%;
+        margin: auto;
+        background-color: beige;
+        padding-top: 20px;
+        border-radius: 7px;
+    }
+    .b1 .bottom {
+        width: 90%;
+        margin: auto;
+    }
+    .b1 .bottom p {
+        border: 1px solid #282A35;
+        padding: 10px 18px;
+        margin: 10px 0;
+        width: fit-content;
+        border-radius: 8px;
+    }
+    .b1-2 {
+        padding-left: 20px;
+        margin: 0;
+    }
+    .b1-2-1,.b1-2-2 {
+        float: left;
+        color: black;
+        padding: 10px;
+        font-weight: 400;
+    }
+    .b1 .b1-2 .b1-2-1 {
+        background-color: rgba(133, 233, 216, 0.219);
+    }
+    .b1 .b1-2 .b1-2-2:hover {
+        background-color: rgba(133,233,216,0.219);
+    }
+    .b1-1 p {
+        display: inline;
+    }
+    .b1-1 p img {
+        width: 50px;
+        margin-left: 30px;
+        display: inline-block;
+    }
+    .b1-1 p::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    .b1 .second{
+        width: 89%;
+        margin: auto;
+    }
+    .spa {
+        background-color: #d9eee1;
+        padding: 50px;
+    }
+    .spa .p1 {
+        font-size: 65px;
+    }
+    .sec .p1 {
+        font-size: 45px;
+    }
+    .spa .image {
+        width: 80%;
+        margin: auto;
+        margin-top: 30px;
+    }
+    .sec {
+        text-align: center;
+        padding: 80px 40px;
+    }
+    .sec .suk {
+        background-color: #04aa6d;
+        color: white;font-weight: 500;padding: 15px 100px;border-radius: 25px;width: fit-content;margin: auto;
+        font-size: 19px;margin-bottom: 40px;
+    }
+    .sec ul {
+        list-style-type: none;
+        display: inline-block;
+        margin-bottom: 50px;
+    }
+    .sec ul li {
+        text-align: start;
+        font-weight: 700px;
+        margin: 10px 0;
+        font-size: 19px;
+    }
+    .sec ul li a {
+        color: white;
+    }
+    .sec ul li a:hover {
+        color: #04aa6d;
+    }
+    .sec ul li img {
+        width: 20px;
+        border-radius: 50%;
+    }
+    .sec .op:hover {
+        opacity: 0.6;
+        cursor: pointer;
+    }
+    .sec .quiz {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 10%;
+        width: 95%;
+        margin: auto;
+    }
+    .sec .quiz .one , .sec .quiz .two {
+        border-radius: 5px;
+        padding: 30px 0;
+    }
+    .footer .first::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    .footer .first .top,.footer .first .rem{
+        float: left;
+        color: black;
+        margin-right: 3px;
+    }
+    .footer .first .top p,.footer .first .rem p {
+        display: inline;
+        background-color: white;
+        font-size: 18px;
+        border-radius: 7px;
+        padding: 10px;
+    }
+    .footer .first .last {
+        float: right;
+    }
+    .footer .first .last a {
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+    .footer .first a {
+        color: white;
+        text-decoration: none;
+    }
+    .footer .second::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    .footer .second {
+        padding: 30px 0px 20px 0;
+    }
+    .footer .second i {
+        float: right;
+        margin: 10px 20px;
+        font-size: 20px;
+        color: black;
+        text-align: center;
+        background-color: white;
+        border-radius: 5px;
+        padding: 2px 5px;
+        cursor: pointer;
+    }
+    .footer .endlike {
+        width: 20%;
+        margin: auto;
+        text-align: center;
+    }
+    .footer .endlike img {
+        width: 100px;
+
+    }
+    .footer .endlike img:hover {
+        transform: rotate(-20deg);
+        transition: 0.3s ease-in;
+    }
+    .tv .slideshow-container {
+        max-width: 1000px;
+        margin: auto;
+        position: relative;
+    }
+    .tv .slideshow-container .mySlides {
+        display: none;
+    }
+    .tv .slideshow-container .prev,.tv .slideshow-container .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        color: white;
+    }
+    .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 20px;
+    }
+    .tv .slideshow-container .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+    .tv .slideshow-container .prev:hover,.tv .slideshow-container .next:hover {
+        background-color: rgba(0,0,0,0.8);
+    }
+    .tv .slideshow-container .text {
+        color: white;
+        position: absolute;
+        font-size: 12px;
+        padding: 8px 12px;
+        color: white;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+    .active,.dot:hover {
+        background-color: #717171;
+    }
+    .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+    .tv .suk {
+        background-color: #282A35;
+        color: white;
+        font-weight: 600;
+        padding: 15px 80px;
+        border-radius: 25px;
+        width: fit-content;
+        margin: auto;
+    }
+    .tv .suk:hover {
+        background-color: #04aa6d;
+    }
+    @keyframes fade {
+        from {opacity: .4;}
+        to {opacity: 1;}
+    }
+    @media screen and (max-width: 1200px) {
+        .a0 .details .one {
+            display: none;
+        }
+        .a0 .menu .block2 .vin {
+            display: none;
+        }
+    }
+    @media screen and (max-width: 986px) {
+        .a2sub1,.a3sub1,.a4sub1,.a5sub1,.a6sub1 {
+            flex: 100%;
+        }
+        .a2sub2,.a3sub2,.a4sub2,.a5sub2,.a6sub2 {
+            flex: 100%;
+            height: 400px;
+        }
+        .a7 {
+            display: grid;
+            grid-template-columns: repeat(1,100%);
+        }
+        .a7 .a76 {
+            margin-bottom: 0;
+        }
+        .a8 {
+            display: grid;
+            grid-template-columns: repeat(1,100%);
+        }
+        .a9 {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+        }
+        .b1 .bottom p {
+            width: 100%;
+        }
+        .footer .first .top::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        .footer .first .bar {
+            margin: auto;
+        }
+        .footer .first .top {
+            float: none;
+            text-align: center;
+            margin: 0;
+        }
+        .footer .first .top p {
+            display: inline-block;
+            font-size: 14px;
+        }
+        .footer .first .rem {
+            float: none;
+            margin: auto;
+            margin-top: 40px;
+            width: 275px;
+        }
+        .footer .first .rem p{
+            display: block;
+            text-align: center;
+            font-size: 14px;
+        }
+        .footer .first .last {
+            float: none;
+            text-align: center;
+        }
+    }
+    @media screen and (max-width: 948px) {
+        .a0 .details .two {
+            display: none;
+        }
+    }
+    @media screen and (max-width: 860px) {
+        .a0 .menu .block1 {
+            display: inline-block;
+        }
+        .a0 .menu .block1 p {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .a0 .menu .block2 {
+            display: none;
+        }
+    }
+    @media screen and (max-width: 600px) {
+        .a0 .modes .one {
+            display: none;
+        }
+        .tv .suk {
+            width: 90%;
+            margin: auto;
+        }
+    }
+    @media screen and (max-width: 587px) {
+        .a2,.a3,.a4,.a5,.a6 {
+            padding: 60px 10px;
+        }
+        .a2sub2,.a3sub2,.a4sub2,.a5sub2,.a6sub2 {
+            display: none;
+        }
+        .a9 {
+            display: grid;
+            grid-template-columns: repeat(1,100%);
+        }
+        .b1 h1 {
+            font-size: 40px;
+        }
+        .spa .p1 {
+            font-size: 40px;
+        }
+        .sec .p1 {
+            font-size: 40px;
+        }
+        .sec .quiz {
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            grid-gap: 0;
+        }
+    }
+    @media screen and (max-width: 455px) {
+        .sec .suku {
+            padding: 15px 0;
+            width: 100%;
+        }
+    }
+    @media screen and (max-width: 390px) {
+        .sec .suk {
+            padding: 15px 0;
+            width: 100%;
+        }
+    }
+    @media screen and (max-width: 380px) {
+        .a0 .modes .two ,.a0 .modes .three {
+            display: none;
+        }
+        .b1-1 {
+            width: 100%;
+        }
+    }
+</style>
+<body>
+    <div class="a0">
+        <div class="logo">
+            <img src="w3.png" alt="">
+        </div>
+        <div class="menu">
+            <div class="block1">
+                    <p>Menu <img src="sort-down.png" alt="" width="20px">
+            </div>
+            <div class="block2">
+                <p>Tutorials<img width="15px" src="sort-down.png" alt=""></p>
+                <p>References<img width="15px" src="sort-down.png" alt=""></p>
+                <p>Exercises<img width="15px" src="sort-down.png" alt=""></p>
+                <p class="vin">Videos</p>
+            </div>
+        </div>
+        <div class="modes">
+            <div class="place">
+            <div class="one">
+                <img style="transform: rotate(180deg);" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRELZi8plEq-ahAK5toCkCimvrwS2lOeyBXzA&usqp=CAU.png" alt="">
+            </div>
+            <div class="two">
+                <img src="https://cdn-icons-png.flaticon.com/512/44/44386.png" alt="">
+            </div>
+            <div class="three">
+                <img src="https://spng.pngfind.com/pngs/s/182-1821523_png-file-zoom-lens-icon-png-transparent-png.png" alt="">
+            </div>
+            </div>
+        </div>
+        <div class="details">
+            <div class="one" style="background-color: pink;">
+                Get Certified
+            </div>
+            <div class="two" style="background-color: #fff4a3;">
+                Create Website
+            </div>
+        </div>
+        <div class="login">
+            <div>Log in</div>
+        </div>
+    </div>
+    <div class="a1">
+        <h1 class="a11" style="font-size: 80px;margin: 0;">Learn to Code</h1>
+        <h2 class="a12">With the world's largest Web developer site.</h2>
+        <form action="/action_page.php" style="margin: auto;">
+            <input class="a13" type="text" placeholder="Search our tutorials, e.g. HTML" name="search">
+            <button class="a131" type="button"><i class="fa fa-search"></i></button>
+        </form>
+        <a class="a14" href="#">Not Sure Where To Begin?</a>
+    </div>
+    <div class="a2">
+        <div class="a2sub1">
+            <h1 class="a21">HTML</h1>
+             <h3 class="a22">The language for building web pages</h3>
+            <ul class="a23">
+                <li class="a24">Learn HTML</li>
+                <li class="a25">Video Tutorial</li>
+                <li class="a26">HTML Reference</li>
+                <li class="a27">Get Certified</li>
+            </ul>
+        </div>
+        <div class="a2sub2">
+            <h3>HTML Example:</h3>
+            <h1 style="border: 1px solid rgba(128, 128, 128, 0.404); width: 80%;height: 60%;border-left: 3px solid green;background-color: white;" ></h1>
+            <p style="background-color: green;color: white;padding: 10px; border-radius: 25px;width: 180px;text-align: center;">Try it Yourself</p>
+        </div>
+    </div>
+    <div class="a3">
+        <div class="a3sub1">
+        <h1 class="a31">CSS</h1>
+        <h3 class="a32">The language for styling web pages</h3>
+        <ul class="a33">
+            <li class="a34">Learn CSS</li>
+            <li class="a35">CSS Reference</li>
+            <li class="a36">Get Certified</li>
+        </ul>
+    </div>
+    <div class="a3sub2">
+        <h3>CSS Example:</h3>
+        <h1 style="border: 1px solid rgba(128, 128, 128, 0.404); width: 80%;height: 60%;border-left: 3px solid green;background-color: white;" ></h1>
+        <p style="background-color: green;color: white;padding: 10px; border-radius: 25px;width: 180px;text-align: center;">Try it Yourself</p>
+    </div>
+    </div>
+    <div class="a4">
+        <div class="a4sub1">
+        <h1 class="a41">JavaScript</h1>
+        <h3 class="a42">The language for programming web pages</h3>
+        <ul class="a43">
+            <li class="a44">Learn JavaScript</li>
+            <li class="a45">JavaScript Reference</li>
+            <li class="a46">Get Certified</li>
+        </ul>
+    </div>
+    <div class="a4sub2">
+        <h3>JavaScript Example:</h3>
+        <h1 style="border: 1px solid rgba(128, 128, 128, 0.404); width: 80%;height: 60%;border-left: 3px solid green;background-color: white;" ></h1>
+        <p style="background-color: green;color: white;padding: 10px; border-radius: 25px;width: 180px;text-align: center;">Try it Yourself</p>
+    </div>
+    </div>
+    <div class="a5">
+        <div class="a5sub1">
+        <h1 class="a51">Python</h1>
+        <h3 class="a52">A popular programming language</h3>
+        <ul class="a53">
+            <li class="a54">Learn Python</li>
+            <li class="a55">Python Reference</li>
+            <li class="a56">Get Certified</li>
+        </ul>
+    </div>
+    <div class="a5sub2">
+        <h3>Python Example:</h3>
+        <h1 style="border: 1px solid rgba(128, 128, 128, 0.404); width: 80%;height: 60%;border-left: 3px solid green;background-color: white;" ></h1>
+        <p style="background-color: green;color: white;padding: 10px; border-radius: 25px;width: 180px;text-align: center;">Try it Yourself</p>
+    </div>
+    </div>
+    <div class="a6">
+        <div class="a6sub1">
+        <h1 class="a61">SQL</h1>
+        <h3 class="a62">A language for accessing databases</h3>
+        <ul class="a63">
+            <li class="a64">Learn SQL</li>
+            <li class="a65">SQL Reference</li>
+            <li class="a66">Get Certified</li>
+        </ul>
+    </div>
+    <div class="a6sub2">
+        <h3>SQL Example:</h3>
+        <h1 style="border: 1px solid rgba(128, 128, 128, 0.404); width: 80%;height: 60%;border-left: 3px solid green;background-color: white;" ></h1>
+        <p style="background-color: green;color: white;padding: 10px; border-radius: 25px;width: 180px;text-align: center;">Try it Yourself</p>
+    </div>
+    </div>
+    <div class="a7">
+        <div class="a71 a70">
+            <h1>PHP</h1>
+            <p>A web server programming language</p>
+            <div><a href="#">Learn PHP</a></div>
+        </div>
+        <div class="a72 a70">
+            <h1>jQuery</h1>
+            <p>A JS library for developing web pages</p>
+            <div><a href="#">Learn jQuery</a></div>
+        </div>
+        <div class="a73 a70">
+            <h1>Java</h1>
+            <p>A programming language</p>
+            <div><a href="#">Learn Java</a></div>
+        </div>
+        <div class="a74 a70">
+            <h1>C++</h1>
+            <p>A programming language</p>
+            <div><a href="#">Learn C++</a></div>
+        </div>
+        <div class="a75 a70">
+            <h1>W3.CSS</h1>
+            <p>A CSS framework for faster and better responsive web pages</p>
+            <div><a href="#">Learn W3.CSS</a></div>
+        </div>
+        <div class="a76 a70">
+            <h1>Bootstrap</h1>
+            <p>A CSS framework for designing better web pages</p>
+            <div><a href="#">Learn Bootstrap</a></div>
+        </div>
+    </div>
+    <div class="a8">
+        <div class="a81">
+            c
+        </div>
+        <div class="a82">
+            c<span style="font-size: 30px;">#</span>
+        </div>
+    </div>
+    <div class="a9">
+        <div class="a91 s">R</div>
+        <div class="a92 s">Kotlin</div>
+        <div class="a93 s">Node.js</div>
+        <div class="a94 s">React</div>
+        <div class="a95 s">JSON</div>
+        <div class="a96 s">AngularJS</div>
+        <div class="a97 s">MySQL</div>
+        <div class="a98 s">XML</div>
+        <div class="a99 s">Sass</div>
+        <div class="a910 s">Icons</div>
+        <div class="a911 s">RWD</div>
+        <div class="a912 s">Graphics</div>
+        <div class="a913 s">SVG</div>
+        <div class="a914 s">Canvas</div>
+        <div class="a915 s">Raspberry Pi</div>
+        <div class="a916 s">Cyber Security</div>
+        <div class="a917 s">Colors</div>
+        <div class="a918 s">Git</div>
+        <div class="a919 s">Matplotlib</div>
+        <div class="a920 s">NumPy</div>
+        <div class="a921 s">Pandas</div>
+        <div class="a922 s">SciPy</div>
+        <div class="a923 s">ASP</div>
+        <div class="a924 s">Accessibility</div>
+        <div class="a925 s">AppML</div>
+        <div class="a926 s">Go</div>
+        <div class="a927 s">TypeScript</div>
+        <div class="a928 s">Django</div>
+        <div class="a929 s">MongoDB</div>
+        <div class="a9210 s">Statistics</div>
+        <div class="a9211 s">Data Science</div>
+        <div class="a9212 s">Typing Speed</div>
+    </div>
+    <div class="a8">
+        <div class="a83">
+            Excel
+        </div>
+        <div class="a84">
+            Google sheets
+        </div>
+        <div class="a85">
+            Machine Learning
+        </div>
+        <div class="a86">Artificial Intelligence</div>
+    </div>
+    <div class="b1">
+        <h1 style="text-align:center;font-size: 65px;font-weight: 700;">Code Editor</h1>
+        <h3 style="text-align:center;">With our online code editor, you can edit code and view the result in your browser</h3>
+        <div class="b1-1">
+            <p><img style="float: left;" src="redgreenyellow.jpeg" width="40px" alt=""><span style="color: black; float: left;font-size: 12px;margin-left: 15px;">www.w3schools.com/tryit/</span></p>
+            <div class="b1-2">
+                <div class="b1-2-1">Frontend</div>
+                <div class="b1-2-2">Backend</div>
+                <div><img width="100%" src="https://www.w3schools.com/codeeditor.gif" alt=""></div>
+            </div>
+        </div>
+        <div class="bottom">
+            <p style="background-color: #04aa6d;">Try Frontend Editor (HTML/CSS/JS)</p>
+            <p style="color: black;background-color: #e6f843be;">Try Backend Editor (Python/PHP/Java/C..)</p>
+        </div>
+    </div>
+    <div class="b1" >
+        <h1 style="text-align: center;font-weight: 700;">W3Schools Spaces</h1>
+        <h3 style="text-align: center;">Build your own website with W3Schools Spaces.</h3>
+        <div><img width="100%" src="https://www.w3schools.com/pro/pic_spaces_ide.png" alt=""></div>
+        <div class="second"><img width="100%" style="border-radius: 8px;" src="https://www.w3schools.com/how-spaces-works3.png" alt=""></div>
+        <p style="text-align: center;background-color: #04aa6d;width: fit-content;margin: auto;margin-top: 40px;margin-bottom: 50px;font-weight: 700;border-radius: 25px;padding: 13px 40px;cursor: pointer;">Get Started Now</p>
+    </div>
+    <div class="spa">
+        <p class="p1" style="text-align: center;font-weight: 700;margin: 0;margin-bottom: 30px;">My Learning</p>
+        <p style="text-align: center;font-size: 19;font-weight: 500;">Track your progress with the <strong>free </strong> "My Learning" program here at W3Schools.</p>
+        <p style="font-weight: 500;text-align: center;">Log in to your account, and start earning points!</p>
+        <div class="image"><img width="100%" src="https://www.w3schools.com/myl-green-off.png" alt=""></div>
+        <p style="text-align: center;color: white;background-color: #04aa6d;font-size: 20px;margin: auto;padding: 14px 40px;margin-top: 20px;margin-bottom: 40px;width: fit-content;border-radius: 25px;cursor: pointer;">Sign Up for Free</p>
+    </div>
+    <div class="sec" style="color: white;background-color: #282A35;">
+        <p class="p1" style="margin: 0;font-weight: 700;">Become a PRO User</p>
+        <p style="font-size: 22px;color: pink;">And unlock powerful features:</p>
+        <ul>
+            <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhGzDCaFfLwrrbOk82u1ne7ox_3aJ-46qI1A&usqp=CAU" alt="">&nbsp; Browse W3Schools <strong>without ads</strong></li>
+            <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhGzDCaFfLwrrbOk82u1ne7ox_3aJ-46qI1A&usqp=CAU" alt="">&nbsp; Website hosting(includes <a href="">Spaces </a>PRO)</li>
+            <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhGzDCaFfLwrrbOk82u1ne7ox_3aJ-46qI1A&usqp=CAU" alt="">&nbsp; Acess to our <a href="">HTML Video Tutorial</a></li>
+        </ul>
+        <p class="suk">Learn More</p>
+    </div>
+    <div class="sec">
+        <h1 style="font-size: 65px; margin: 0;font-weight: 700;">Color Picker</h1>
+        <h4 style="font-size: 20px;font-weight: 500;">W3Schools's famous color picker:</h4>
+        <div>
+            <img class="op" style="cursor: pointer;" src="colorpicker.png" alt="">
+        </div>
+    </div>
+    <div class="sec" style="background-color: #96d4d4;font-family: fantasy;">
+        <p style="font-size: 40px;margin: 0;font-weight: 700;">Code Game</p>
+        <p style="font-size: 25px;">Help the Lynx collect pine cones!</p>
+        <div>
+            <img class="op" src="w3lynx_200.png" alt="">
+        </div>
+        <p style="background-color: #282A35;width: fit-content;padding: 12px 40px;border-radius: 25px;margin-bottom: 50px;margin: auto;margin-top: 30px;cursor: pointer;"><a style="text-decoration: none;color: white;font-weight: 700;" href="">Play Game</a></p>
+    </div>
+    <div class="sec" style="background-color: #282A35;color: white;">
+        <p style="font-size: 50px;margin: 0;font-weight: 700;">Exercises and Quizzes</p>
+        <p style="font-weight: 700;">Test your skills!</p>
+        <div class="quiz">
+            <h1 class="one" style="background-color: #04aa6d;">Exercises</h1>
+            <h1 class="two" style="background-color: #fff4a3;color: black;">Quizzes</h1>
+        </div>
+    </div>
+    <div class="sec" style="background-color: #e7e9eb;">
+        <h1 style="font-size: 50px; margin: 0;">Web Templates</h1>
+        <p>Browse our selection of <strong>free</strong> responsive HTML Templates</p>
+        <div style="width: 80%;margin: auto;"><img style="width: 100%;margin-top: 25px;" src="w3css_templates.jpg" alt=""></div>
+        <p class="suku suk" style="background-color: #282A35;">Browse Templates</p>
+    </div>
+    <div class="sec" style="background-color: #282A35;color: pink;text-align: start;font-weight: 700;">
+        <p style="font-size: 50px;">Kickstart your career</p>
+        <p style="font-size: 40px;">Get Certified by completing a course</p>
+        <p style="color: white;background-color: #04aa6d;border-radius: 25px;padding: 18px 45px;width: fit-content;cursor: pointer;">Get started</p>
+    </div>
+    <div class="tv" style="background-color: white;text-align: center; padding: 50px 0px;">
+        <div class="section" style="font-weight: 400;">
+            <h2 style="font-size: 55px;margin: 0;">How To Section</h2>
+            <h4>Code snippets for HTML,CSS and JavaScript</h4>
+            <h5>For example, how to create a slideshow:</h5>
+        </div>
+        <div class="image" style="width: 80%;margin: auto;text-align: left;padding: 10px 5px;background-color: #e3f0f0;border-radius: 8px;">
+            <div class="circles" style="width: 20%;float: left;"><img src="redgreenyellow.jpeg" alt="" style="width: 50px;margin-left: 8px;"></div>
+            <div style="width: 60%;float: left;font-size: small;background-color: rgb(255, 255, 255);border-radius: 5px;padding: 3px;">www.w3schools.com/howto/</div><br><br>
+            <div class="slideshow-container" style="width: 100%;margin: auto;">
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img style="max-width: 100%;" src="firstSlide.jpg" alt="">
+                    <div class="text">Caption Text</div>
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img width="100%" src="secondSlide.jpg" alt="">
+                    <div class="text">Caption Two</div>
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img width="100%" src="thirdSlide.jpg" alt="">
+                    <div class="text">Caption Three</div>
+                </div>
+                <a onclick="plusSlides(-1)" href="" class="prev">&#10094;</a>
+                <a onclick="plusSlides(1)" href="" class="next">&#10095;</a>
+            </div>
+            <br>
+            <div style="text-align: center;">
+                <span onclick="currentSlide(1)" class="dot"></span>
+                <span onclick="currentSlide(2)" class="dot"></span>
+                <span onclick="currentSlide(3)" class="dot"></span>
+            </div>
+        </div>
+        <div class="handle" style="background-color: #282A35;width: 50px;height: 80px; margin: auto;"></div>
+        <div class="suk">Learn How To</div>
+    </div>
+    <div class="footer" style="padding: 10px 30px;background-color: #282A35;padding-top: 50px;">
+        <div class="first" style="margin-bottom: 30px;">
+            <div class="bar">
+                <div class="top">
+                    <p>QUIZZES</p>
+                    <P>EXERCISES</P>
+                    <p>SUPPORT</p>
+                </div>
+                <div class="rem">
+                    <p>CERTIFICATES</p>
+                    <p>UPGRADE</p>
+                    <P>SPACES</P>
+                    <p>NEWSLETTER</p>
+                </div>
+            </div>
+            <div class="last">
+                <a href="" class="r">FOURM</a>
+                <span style="color: white;">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                <a href="" class="r">ABOUT</a>
+            </div>
+        </div>
+        <div class="second">
+            <i class="fa fa-linkedin"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-facebook"></i>
+        </div>
+        <div style="text-align: center;color: white;font-size: 15px;">
+            <h5 style="color: white;">W3Schools is optimized for learning, testing, and training. Examples might be simplified to improve reading and basic understanding. Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content. While using this site, you agree to have read and accepted our terms of use, cookie and privacy policy.</h5>
+            <h5>Copyright 1999-2023 by Refsnes Data. All Rights Reserved.</h5>
+        </div>
+        <div class="endlike">
+            <img class="like" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Facebook_Thumb_icon.svg/1200px-Facebook_Thumb_icon.svg.png" alt="">
+        </div>
+    </div>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if(n > slides.length) {
+                slideIndex = 1
+            }
+            if(n < 1) {
+                slideIndex = slides.length
+            }
+            for(i = 0;i < slides.length;i++) {
+                slides[i].style.display = "none";
+            }
+            for(i = 0;i<dots.length;i++) {
+                dots[i].className = dots[i].className.replace(" active","");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+        }
+    </script>
+</body>
+</html>
